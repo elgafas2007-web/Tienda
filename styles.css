@@ -1,0 +1,78 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero animación de entrada */
+#hero h1 {
+  animation: fadeInDown 1.5s ease;
+}
+#hero p {
+  animation: fadeInUp 2s ease;
+}
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-50px);} 
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(50px);} 
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Botones personalizados */
+.btn-primary {
+  background-color: #ff4b2b;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #ff6f61;
+  transform: scale(1.05);
+}
+
+/* Tarjetas con efecto hover */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Galería hover */
+#galeria img {
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+#galeria img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Tabla */
+table tbody tr:hover {
+  background-color: #fceaea;
+  transition: background-color 0.3s;
+}
+
+/* Lista personalizada */
+ul.list-group li {
+  border: none;
+}
+ul.list-group li::before {
+  content: "✔️ ";
+  color: #ff4b2b;
+}
+
+/* Footer enlaces */
+footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #ff6f61;
+}
+
+/* Responsividad extra */
+@media (max-width: 768px) {
+  #hero h1 {font-size: 2rem;}
+  #hero p {font-size: 1rem;}
+}
